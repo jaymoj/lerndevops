@@ -1,7 +1,9 @@
 ## Install Kubernetes on Ubuntu 18.04 LTS 
 
 ### Step1: `On All Machines ( Master & All nodes ):`
-
+    ### Prerequisite
+    ###    Make sure you've run aws/setup-user.sh and have logged in as devops user from a terminal
+    
     ### INSTALL DOCKER 
     
     sudo apt-get update
@@ -12,6 +14,7 @@
     sudo apt-get update ; clear
     sudo apt-get install -y docker-ce
     sudo service docker start ; clear
+    sudo usermod -aG docker $USER
 
     ### INSTALL KUBEADM,KUBELET,KUBECTL
     
